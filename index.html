@@ -6,26 +6,37 @@
     <title>Tomas Bejarano | Desarrollador Web</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
+  <body class="bg-[#0a1124]">
     <header>
       <!-- Acá va el logo -->
-      <img src="" alt="" />
-      <nav>
+      <nav
+        class="flex justify-center items-end h-20 gap-6 bg-[#0a1124] text-white"
+      >
+        <img
+          class="absolute left-1 size-10 m-6"
+          src="./resources/invader-solid-24.png"
+          alt="pequeño logo"
+        />
+
         <a href="">Sobre mí</a>
         <a href="">Habilidades</a>
         <a href="">Proyectos</a>
-        <a href="">Contacto</a>
+        <a
+          class="absolute right-12 size-10 pr-28 border border-white rounded-3xl"
+          href=""
+          >Contacto</a
+        >
       </nav>
     </header>
     <main>
       <section
-        class="h-[700px] bg-linear-to-b from-[#0a1124] from-30% to-[#28498d] flex flex-col justify-around items-center text-6xl"
+        class="h-[750px] bg-linear-to-b from-[#0a1124] from-30% to-[#28498d] flex flex-col justify-around items-center text-6xl"
       >
         <div class="flex flex-col gap-5.5">
           <h1 class="text-white text-center">
             Soy <span class="text-[#a4ff7a]"><em>Tomás Bejarano</em></span>
           </h1>
-          <p class="text-white text-center mb-24">
+          <p class="text-white text-center mb-80">
             Desarrollador
             <span class="border border-[#ffffff69] rounded-xl">Front-End</span>
           </p>
@@ -33,12 +44,12 @@
         <!-- Acá va un PNG mío -->
         <div class="flex flex-col justify-center items-center">
           <img
-            class="w-52 h-[350px] absolute top-[375px] shadow-[0_0_300px_50px_rgba(255,255,0,0.5)]"
+            class="w-52 h-[350px] absolute top-[448px] drop-shadow-[0_-60px_100px_rgba(255,255,0,0.5)]"
             src="https://images.stockcake.com/public/b/c/5/bc5dac39-0b9e-4346-a2ec-567aded14ae8_large/professional-businessman-posing-stockcake.jpg"
             alt="foto perfil"
           />
           <a
-            class="p-2.5 bg-[#a4ff7a] rounded-3xl absolute top-[650px] text-xl"
+            class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl absolute top-[740px] text-lg"
             href=""
             >MIS PROYECTOS</a
           >
@@ -46,7 +57,7 @@
 
         <!-- En estos divs van los cuadritos con info para presumir -->
         <div
-          class="absolute left-10 top-[400px] bg-[#1e2337] w-80 rounded-xl p-6 -rotate-13"
+          class="absolute left-10 top-[400px] bg-[#1e2337] w-80 rounded-xl p-6 -rotate-13 drop-shadow-[0_0px_100px_rgba(255,255,0,0.5)]"
         >
           <p class="text-white text-lg">Reseña de un cliente</p>
           <p class="text-[rgba(255,255,255,0.45)] text-sm">
@@ -56,31 +67,113 @@
           </p>
         </div>
 
-        <div></div>
+        <div
+          class="absolute right-10 top-[400px] bg-[#1e2337] w-80 rounded-xl p-6 rotate-13 drop-shadow-[0_0px_100px_rgba(255,255,0,0.5)]"
+        >
+          <p class="text-white text-lg">Reseña de un cliente</p>
+          <p class="text-[rgba(255,255,255,0.45)] text-sm">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi
+            perspiciatis voluptatem impedit eligendi recusandae praesentium,
+            quae deleniti.
+          </p>
+        </div>
       </section>
-      <section>
-        <h2 class="text-neonGreen">¿QUIÉN SOY?</h2>
-        <p>Breve introducción</p>
+
+      <section class="flex flex-col justify-start items-center h-[550px]">
+        <h2 class="text-[#a4ff7a] text-5xl mt-[130px]">¿QUIÉN SOY?</h2>
+        <p class="text-white max-w-96 text-center my-13">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          consequatur, delectus totam libero enim perspiciatis alias ipsum,
+          natus, inventore temporibus explicabo optio. Laboriosam soluta ducimus
+          blanditiis neque quae vero, quidem voluptas, magnam, adipisci laborum
+          obcaecati recusandae nulla dolorem delectus numquam alias. Minima
+          fugit illo magnam unde deleniti est delectus porro.
+        </p>
         <!-- Imagen decorativa -->
-        <img src="" alt="" />
+        <img
+          class="absolute left-22 top-[1100px] h-[200px] rotate-15 drop-shadow-[0_0px_50px_rgba(255,255,255,0.3)]"
+          src="./resources/business-man.png"
+          alt="foto decorativa"
+        />
+        <img
+          class="absolute right-28 top-[1000px] h-[200px] -rotate-15 drop-shadow-[-70px_-90px_50px_rgba(255,255,255,0.3)]"
+          src="./resources/business-man.png"
+          alt="foto decorativa"
+        />
         <!-- Tarjeta informativa -->
         <div></div>
-        <a href="">MIS PROYECTOS</a>
+        <a
+          class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg"
+          href=""
+          >MOSTRAR PROYECTOS</a
+        >
       </section>
-      <section>
-        <h2>MIS HABILIDADES</h2>
+      <section class="flex flex-col justify-start items-center h-[650px]">
+        <h2 class="text-[#a4ff7a] text-5xl mt-[130px]">MIS HABILIDADES</h2>
         <!-- Íconos con mis habilidades -->
-        <div><img src="" alt="" /></div>
-        <div><img src="" alt="" /></div>
-        <div><img src="" alt="" /></div>
-        <div><img src="" alt="" /></div>
-        <div><img src="" alt="" /></div>
-        <div><img src="" alt="" /></div>
-        <!-- Acá van mis años de experiencia -->
-        <div>
-          <p>Experiencia</p>
-          <a href="">DESCARGAR CV</a>
+        <div class="flex flex-wrap justify-center items-center w-[600px]">
+          <div class="flex flex-wrap justify-start items-center">
+            <div
+              class="bg-slate-500 w-30 h-30 m-4 flex justify-center items-center"
+            >
+              <img
+                class="w-32"
+                src="./resources/html5-logo-24.png"
+                alt="html logo"
+              />
+            </div>
+            <div
+              class="bg-slate-500 w-30 h-30 m-4 flex justify-center items-center"
+            >
+              <img
+                class="w-32"
+                src="./resources/css3-logo-24.png"
+                alt="css logo"
+              />
+            </div>
+            <div
+              class="bg-slate-500 w-30 h-30 m-4 flex justify-center items-center"
+            >
+              <img
+                class="w-32"
+                src="./resources/javascript-logo-24.png"
+                alt="javascript logo"
+              />
+            </div>
+            <div
+              class="bg-slate-500 w-30 h-30 m-4 flex justify-center items-center"
+            >
+              <img
+                class="w-32"
+                src="./resources/python-logo-24.png"
+                alt="python logo"
+              />
+            </div>
+            <div
+              class="bg-slate-500 w-30 h-30 m-4 flex justify-center items-center"
+            >
+              <img
+                class="w-32"
+                src="./resources/tailwind-css-logo-24.png"
+                alt="tailwind css logo"
+              />
+            </div>
+            <div
+              class="bg-slate-500 w-30 h-30 m-4 flex justify-center items-center"
+            >
+              <img
+                class="w-32"
+                src="./resources/aws-logo-24.png"
+                alt="aws logo"
+              />
+            </div>
+          </div>
+          <div>
+            <p>Experiencia</p>
+            <a href="">DESCARGAR CV</a>
+          </div>
         </div>
+        <!-- Acá van mis años de experiencia -->
       </section>
       <section>
         <!-- Imagenes y descripciones de proyectos -->
