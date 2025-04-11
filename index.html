@@ -12,27 +12,31 @@
 
       <img
         class="absolute left-5 scale-200 m-6"
-        src="./resources/invader-solid-24.png"
+        src="./resources/bxs-invader.svg"
         alt="pequeño logo"
       />
 
       <nav
         class="flex justify-center items-center h-22 gap-6 bg-[#0a1124] text-white"
       >
-        <a href="">ABOUT ME</a>
-        <a href="">SKILLS</a>
-        <a href="">PROJECTS</a>
+        <a href="#aboutme">ABOUT ME</a>
+        <a href="#skills">SKILLS</a>
+        <a
+          href="https://github.com/TBejarano24?tab=repositories"
+          target="_blank"
+          >PROJECTS</a
+        >
       </nav>
 
       <img
         class="absolute right-22 top-8 scale-[155%]"
-        src="./resources/right-top-arrow-circle-solid-24.png"
+        src="./resources/bxs-right-top-arrow-circle.svg"
         alt="arrow"
       />
 
       <a
         class="absolute right-20 top-6 size-10 border p-[10px_110px_10px_10px] rounded-3xl text-white"
-        href=""
+        href="#contact"
         >CONTACT
       </a>
     </header>
@@ -45,8 +49,8 @@
             I'm <span class="text-[#a4ff7a]"><em>Tomás Bejarano</em></span>
           </p>
           <h1>
-            <span class="border border-[#ffffff69] rounded-xl"> Front-End </span
-            ><span>Developer</span>
+            <span class="border border-[#ffffff69] rounded-xl">Front-End</span
+            ><span> Developer</span>
           </h1>
         </div>
         <!-- Acá va un PNG mío -->
@@ -58,8 +62,9 @@
           />
           <a
             class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl absolute top-[740px] text-lg"
-            href=""
-            >MIS PROYECTOS</a
+            href="https://github.com/TBejarano24?tab=repositories"
+            target="_blank"
+            >MY PROJECTS</a
           >
         </div>
 
@@ -115,7 +120,10 @@
         </div>
       </section>
 
-      <section class="flex flex-col justify-start items-center h-[590px]">
+      <section
+        id="aboutme"
+        class="flex flex-col justify-start items-center h-[590px]"
+      >
         <h2 class="text-[#a4ff7a] text-6xl mt-[130px]">WHO AM I?</h2>
         <p class="text-white max-w-120 text-center my-12">
           I'm an aspiring full-stack web developer with experience using
@@ -149,11 +157,14 @@
         <div></div>
         <a
           class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg"
-          href=""
-          >MOSTRAR PROYECTOS</a
+          href="https://github.com/TBejarano24?tab=repositories"
+          target="_blank"
+          >SHOW MY PROJECTS</a
         >
       </section>
-      <h2 class="mx-[350px] text-[#a4ff7a] text-6xl mt-[130px]">MY SKILLS</h2>
+      <h2 id="skills" class="mx-[350px] text-[#a4ff7a] text-6xl mt-[130px]">
+        MY SKILLS
+      </h2>
       <section class="flex justify-start items-center h-[550px] w-[1200px]">
         <!-- Íconos con mis habilidades -->
         <div class="flex flex-wrap justify-start items-center">
@@ -163,11 +174,16 @@
             <div
               class="bg-[#1e2235] w-50 h-50 flex justify-center items-center rounded-lg"
             >
-              <img
-                class="w-32"
-                src="./resources/html5-logo-24.png"
-                alt="html logo"
-              />
+              <img src="./resources/bxl-html5.svg" alt="html logo" />
+            </div>
+          </div>
+          <div
+            class="w-52 h-52 bg-linear-to-br from-[#5777ab] to-[#1e2235] flex justify-center items-center rounded-lg m-1"
+          >
+            <div
+              class="bg-[#1e2235] w-50 h-50 flex justify-center items-center rounded-lg"
+            >
+              <img class="w-32" src="./resources/bxl-css3.svg" alt="css logo" />
             </div>
           </div>
           <div
@@ -178,20 +194,7 @@
             >
               <img
                 class="w-32"
-                src="./resources/css3-logo-24.png"
-                alt="css logo"
-              />
-            </div>
-          </div>
-          <div
-            class="w-52 h-52 bg-linear-to-br from-[#5777ab] to-[#1e2235] flex justify-center items-center rounded-lg m-1"
-          >
-            <div
-              class="bg-[#1e2235] w-50 h-50 flex justify-center items-center rounded-lg"
-            >
-              <img
-                class="w-32"
-                src="./resources/javascript-logo-24.png"
+                src="./resources/bxl-javascript.svg"
                 alt="javascript logo"
               />
             </div>
@@ -204,7 +207,7 @@
             >
               <img
                 class="w-32"
-                src="./resources/python-logo-24.png"
+                src="./resources/bxl-python.svg"
                 alt="python logo"
               />
             </div>
@@ -217,7 +220,7 @@
             >
               <img
                 class="w-32"
-                src="./resources/tailwind-css-logo-24.png"
+                src="./resources/bxl-tailwind-css.svg"
                 alt="tailwind css logo"
               />
             </div>
@@ -228,11 +231,7 @@
             <div
               class="bg-[#1e2235] w-50 h-50 flex justify-center items-center rounded-lg"
             >
-              <img
-                class="w-32"
-                src="./resources/aws-logo-24.png"
-                alt="aws logo"
-              />
+              <img class="w-32" src="./resources/bxl-aws.svg" alt="aws logo" />
             </div>
           </div>
         </div>
@@ -261,7 +260,8 @@
           </p>
           <a
             class="absolute top-[2670px] left-15 py-2.5 px-20 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg self-center z-1"
-            href=""
+            href="https://github.com/TBejarano24?tab=repositories"
+            target="_blank"
             >SHOW MY PROJECTS</a
           >
         </div>
@@ -295,6 +295,7 @@
         </div>
       </section>
       <section
+        id="contact"
         class="flex flex-col justify-center items-center bg-[#fffbdd] m-20 rounded-2xl"
       >
         <h2 class="mt-20 text-5xl font-semibold">LET'S HAVE A CHAT</h2>
