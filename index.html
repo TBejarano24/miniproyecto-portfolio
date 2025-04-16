@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tomas Bejarano | Desarrollador Web</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
   </head>
   <body class="bg-[#0a1124] w-screen">
-    <header class="h-22 w-screen">
+    <header class="h-22 w-screen flex justify-between items-start">
       <!-- Acá va el logo -->
 
       <img
-        class="absolute left-2 scale-200 m-6 hover:rotate-15 hover:scale-250 ease-in duration-100"
+        class="scale-200 m-6 hover:rotate-15 hover:scale-250 ease-in duration-100"
         src="./resources/bxs-invader.svg"
         alt="pequeño logo"
       />
@@ -50,8 +52,57 @@
           />
         </a>
       </div> -->
-      <div class="absolute right-5 top-6 scale-200">
-        <img src="./resources/bx-menu.svg" alt="menu_icon" />
+      <div>
+        <!-- drawer init and toggle -->
+        <div class="text-center">
+          <button
+            class="scale-200 m-6"
+            type="button"
+            data-drawer-target="drawer-right-example"
+            data-drawer-show="drawer-right-example"
+            data-drawer-placement="right"
+            aria-controls="drawer-right-example"
+          >
+          <img src="./resources/bx-menu.svg" alt="menu_icon" />
+          </button>
+        </div>
+
+        <!-- drawer component -->
+        <div
+          id="drawer-right-example"
+          class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800"
+          tabindex="-1"
+          aria-labelledby="drawer-right-label"
+        >
+          <button
+            type="button"
+            data-drawer-hide="drawer-right-example"
+            aria-controls="drawer-right-example"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+          >
+            <svg
+              class="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span class="sr-only">Close menu</span>
+          </button>
+          <div>
+            <a href="">ABOUT ME</a>
+            <a href="">SKILLS</a>
+            <a href="">PROJECTS</a>
+          </div>
+        </div>
       </div>
     </header>
     <main class="flex flex-col justify-center items-center">
@@ -267,64 +318,56 @@
         </div>
         <!-- Acá van mis años de experiencia -->
       </section>
-      <section class="flex justify-start items-center mt-20">
-        <div class="flex flex-col justify-start items-center">
-          <p class="absolute top-[10px] text-white text-5xl text-center ml-10">
-            THE WORKS CLOSEST TO MY HEART
-          </p>
-          <a
-            class="absolute top-[2670px] left-15 py-2.5 px-20 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg self-center z-1 hover:scale-110 hover:font-semibold ease-in duration-100"
-            href="https://github.com/TBejarano24?tab=repositories"
-            target="_blank"
-            >SHOW MY PROJECTS</a
-          >
-        </div>
+      <section class="relative flex items-center justify-center my-18">
+        <p class="absolute top-0 text-white text-3xl text-center">
+          THE WORKS CLOSEST TO MY HEART
+        </p>
+        <a
+          class="absolute top-[550px] py-2.5 px-20 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg self-center z-1 hover:scale-110 hover:font-semibold ease-in duration-100"
+          href="https://github.com/TBejarano24?tab=repositories"
+          target="_blank"
+          >SHOW MY PROJECTS</a
+        >
         <div
-          class="relative flex flex-col justify-center items-center w-screen"
+          class="relative flex flex-col justify-center items-center w-screen h-[600px]"
         >
           <!-- Imagenes y descripciones de proyectos -->
-          <div class="relative hover:scale-105 ease-in duration-100">
-            <img
-              class="w-screen h-[400px] rounded-3xl"
-              src="./resources/FaunAR_img.png"
-              alt="Captura de un sitio web"
-            />
-            <span
-              class="absolute bottom-8 left-21 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl z-10"
-              >Biology Blog</span
-            >
-          </div>
-          <div class="relative hover:scale-105 ease-in duration-100">
-            <img
-              class="w-screen h-[400px] rounded-3xl"
-              src="./resources/weather_prjct_img.png"
-              alt="Captura de un fragmento de código (Python)"
-            />
-            <span
-              class="absolute bottom-8 left-16 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl"
-              >Weather Data ETL</span
-            >
-          </div>
-          <div class="relative hover:scale-105 ease-in duration-100">
-            <img
-              class="w-screen h-[400px] rounded-3xl"
-              src="./resources/sql_prjct_img.png"
-              alt="Captura de un fragmento de código (SQL)"
-            />
-            <span
-              class="absolute bottom-8 left-12 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl"
-              >Database Planning</span
-            >
-          </div>
+          <img
+            class="absolute w-[200px] h-[400px] rounded-3xl right-23 z-1"
+            src="./resources/FaunAR_img.png"
+            alt="Captura de un sitio web"
+          />
+          <span
+            class="hidden absolute bottom-8 left-21 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl z-10"
+            >Biology Blog</span
+          >
+          <img
+            class="absolute w-[200px] h-[400px] rounded-3xl right-15 rotate-3"
+            src="./resources/weather_prjct_img.png"
+            alt="Captura de un fragmento de código (Python)"
+          />
+          <span
+            class="hidden absolute bottom-8 left-16 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl"
+            >Weather Data ETL</span
+          >
+          <img
+            class="absolute w-[200px] h-[400px] rounded-3xl right-31 z-2 -rotate-3"
+            src="./resources/sql_prjct_img.png"
+            alt="Captura de un fragmento de código (SQL)"
+          />
+          <span
+            class="hidden absolute bottom-8 left-12 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl"
+            >Database Planning</span
+          >
         </div>
       </section>
       <section
         id="contact"
-        class="flex flex-col justify-center items-center bg-[#fffbdd] m-20 rounded-2xl"
+        class="flex flex-col justify-center items-center bg-[#fffbdd] m-5 w-[90%] rounded-2xl"
       >
-        <h2 class="mt-20 text-5xl font-semibold">LET'S HAVE A CHAT</h2>
+        <h2 class="m-5 text-3xl font-semibold">LET'S HAVE A CHAT</h2>
         <form
-          class="flex flex-col justify-center items-center w-[800px] h-[500px] gap-6"
+          class="flex flex-col justify-start items-center h-[480px] w-[90%] gap-6"
           action=""
         >
           <input
@@ -341,13 +384,13 @@
             id="contact-email"
             name="email"
           />
-          <input
-            class="bg-[#c8c8c8] pb-32 p-2 w-[80%] rounded-2xl hover:scale-110 ease-in duration-100"
+          <textarea
+            class="bg-[#c8c8c8] p-2 h-40 w-[80%] rounded-2xl hover:scale-110 hover:font-semibold ease-in duration-100"
+            rows="10"
             placeholder="CHAT HERE"
-            type="text"
-            id="contact-message"
             name="message"
-          />
+            id="contact-message"
+          ></textarea>
           <input
             class="bg-[#ffe8a7] h-12 w-[80%] rounded-2xl hover:scale-110 hover:font-semibold ease-in duration-100"
             type="submit"
