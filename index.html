@@ -6,17 +6,22 @@
     <title>Tomas Bejarano | Desarrollador Web</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="./main.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
   </head>
   <body class="bg-[#0a1124] w-screen">
-    <header class="h-22 w-screen flex justify-between items-start">
+    <header id="headerElement" class="h-20 w-screen flex justify-between items-start fixed bg-[#091021] z-50">
       <!-- Acá va el logo -->
 
-      <img
-        class="scale-200 m-6 hover:rotate-15 hover:scale-250 ease-in duration-100"
-        src="./resources/bxs-invader.svg"
-        alt="pequeño logo"
-      />
+      <div class="hover:rotate-15 hover:scale-150 ease-in duration-100">
+        <div id="logoCover" class="size-[60px] absolute z-50"></div>
+
+        <img
+          class="scale-200 m-6"
+          src="./resources/bxs-invader.svg"
+          alt="pequeño logo"
+        />
+      </div>
 
       <!-- <div>
         <nav
@@ -56,6 +61,7 @@
         <!-- drawer init and toggle -->
         <div class="text-center">
           <button
+            id="menuButton"
             class="scale-200 m-6"
             type="button"
             data-drawer-target="drawer-right-example"
@@ -70,11 +76,12 @@
         <!-- drawer component -->
         <div
           id="drawer-right-example"
-          class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800"
+          class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-40 dark:bg-gray-800"
           tabindex="-1"
           aria-labelledby="drawer-right-label"
         >
           <button
+            id="closeMenu"
             type="button"
             data-drawer-hide="drawer-right-example"
             aria-controls="drawer-right-example"
@@ -97,19 +104,21 @@
             </svg>
             <span class="sr-only">Close menu</span>
           </button>
-          <div>
-            <a href="">ABOUT ME</a>
-            <a href="">SKILLS</a>
-            <a href="">PROJECTS</a>
+          <div class="flex flex-col text-white gap-6 mt-10 menuHyperLink">
+            <a href="#aboutme">ABOUT ME</a>
+            <hr>
+            <a href="#skills">SKILLS</a>
+            <hr>
+            <a href="https://github.com/TBejarano24?tab=repositories" target="_blank">PROJECTS</a>
           </div>
         </div>
       </div>
     </header>
     <main class="flex flex-col justify-center items-center">
       <section
-        class="h-[500px] w-screen bg-linear-to-b from-[#0a1124] from-30% to-[#28498d] flex flex-col justify-between items-center text-4xl"
+        class="h-[560px] w-screen bg-linear-to-b from-[#0a1124] from-30% to-[#28498d] flex flex-col justify-between items-center text-4xl"
       >
-        <div class="flex flex-col mb-92 text-white text-center gap-1">
+        <div class="flex flex-col text-white text-center gap-1 absolute top-28">
           <p>
             I'm <span class="text-[#a4ff7a]"><em>Tomás Bejarano</em></span>
           </p>
@@ -121,12 +130,13 @@
         <!-- Acá va un PNG mío -->
         <div class="flex flex-col justify-center items-center">
           <img
-            class="w-[170px] h-[170px] absolute top-[230px] drop-shadow-[0_0px_50px_rgba(255,255,0,0.5)] rounded-full"
+            class="w-[170px] h-[170px] absolute top-[260px] drop-shadow-[0_0px_50px_rgba(255,255,0,0.5)] rounded-full"
             src="./resources/tommy_hero_img_round.jpg"
             alt="foto perfil"
           />
           <a
-            class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl absolute top-[450px] text-lg hover:scale-110 hover:font-semibold ease-in duration-100"
+            id="aboutme"
+            class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl absolute top-[500px] text-lg hover:scale-110 hover:font-semibold ease-in duration-100"
             href="https://github.com/TBejarano24?tab=repositories"
             target="_blank"
             >MY PROJECTS</a
@@ -186,7 +196,6 @@
       </section>
 
       <section
-        id="aboutme"
         class="flex flex-col justify-start items-center h-[500px]"
       >
         <h2 class="text-[#a4ff7a] text-4xl mt-[30px]">WHO AM I?</h2>
@@ -221,13 +230,14 @@
         <!-- Tarjeta informativa -->
         <div></div>
         <a
+          id="skills"
           class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg hover:scale-110 hover:font-semibold ease-in duration-100"
           href="https://github.com/TBejarano24?tab=repositories"
           target="_blank"
           >SHOW MY PROJECTS</a
         >
       </section>
-      <h2 id="skills" class="text-[#a4ff7a] text-4xl mt-[130px]">MY SKILLS</h2>
+      <h2 class="text-[#a4ff7a] text-4xl mt-[130px]">MY SKILLS</h2>
       <section
         class="flex flex-wrap justify-center items-center h-[550px] w-screen"
       >
