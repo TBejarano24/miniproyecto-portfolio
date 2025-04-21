@@ -1,413 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tomas Bejarano | Desarrollador Web</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <script src="./main.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-  </head>
-  <body class="bg-[#0a1124] w-screen">
-    <header id="headerElement" class="h-20 w-screen flex justify-between items-start fixed bg-[#091021] z-50">
-      <!-- Acá va el logo -->
+<html lang="en" class="dark">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomas Bejarano | Desarrollador Web</title>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="./main.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="bg-white w-screen dark:bg-[#0a1124]">
+  <header id="headerElement"
+    class="h-20 w-screen flex justify-between items-start fixed dark:bg-[#091021] bg-white z-50">
+    <!-- Acá va el logo -->
+
+    <button id="darkModeToggleButton">
       <div class="hover:rotate-15 hover:scale-150 ease-in duration-100">
+        <div class="flex justify-center items-center">
+          <div id="logoCover" class="hidden size-[60px] absolute z-50 dark:block"></div>
+
+          <img class="hidden scale-200 m-6 dark:block" src="./resources/bxs-invader-white.svg" alt="pequeño logo" />
+
+        </div>
         <div id="logoCover" class="size-[60px] absolute z-50"></div>
 
-        <img
-          class="scale-200 m-6"
-          src="./resources/bxs-invader.svg"
-          alt="pequeño logo"
-        />
-      </div>
+        <img class="block scale-200 m-6 dark:hidden" src="./resources/bxs-invader-black.svg" alt="pequeño logo" />
 
-      <!-- <div>
-        <nav
-          class="flex justify-center items-center h-22 gap-10 bg-[#0a1124] text-white"
-        >
-          <a
-            class="hover:scale-110 hover:font-semibold ease-in duration-100"
-            href="#aboutme"
-            >ABOUT ME</a
-          >
-          <a
-            class="hover:scale-110 hover:font-semibold ease-in duration-100"
-            href="#skills"
-            >SKILLS</a
-          >
-          <a
-            class="hover:scale-110 hover:font-semibold ease-in duration-100"
-            href="https://github.com/TBejarano24?tab=repositories"
-            target="_blank"
-            >PROJECTS</a
-          >
-        </nav>
       </div>
-      <div>
-        <a
-          class="absolute right-20 top-6 size-10 border p-[10px_110px_12px_10px] rounded-3xl text-white hover:bg-[#75b756] hover:text-black hover:font-semibold"
-          href="#contact"
-          >CONTACT
-          <img
-            class="absolute right-2 top-[7px] scale-[155%] z-1"
-            src="./resources/bxs-right-top-arrow-circle.svg"
-            alt="arrow"
-          />
-        </a>
-      </div> -->
-      <div>
-        <!-- drawer init and toggle -->
-        <div class="text-center">
-          <button
-            id="menuButton"
-            class="scale-200 m-6"
-            type="button"
-            data-drawer-target="drawer-right-example"
-            data-drawer-show="drawer-right-example"
-            data-drawer-placement="right"
-            aria-controls="drawer-right-example"
-          >
-          <img src="./resources/bx-menu.svg" alt="menu_icon" />
-          </button>
-        </div>
+      </div>
+    </button>
 
-        <!-- drawer component -->
-        <div
-          id="drawer-right-example"
-          class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-40 dark:bg-gray-800"
-          tabindex="-1"
-          aria-labelledby="drawer-right-label"
-        >
-          <button
-            id="closeMenu"
-            type="button"
-            data-drawer-hide="drawer-right-example"
-            aria-controls="drawer-right-example"
-            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
-          >
-            <svg
-              class="w-3 h-3"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-              />
-            </svg>
-            <span class="sr-only">Close menu</span>
-          </button>
-          <div class="flex flex-col text-white gap-6 mt-10 menuHyperLink">
-            <a href="#aboutme">ABOUT ME</a>
-            <hr>
-            <a href="#skills">SKILLS</a>
-            <hr>
-            <a href="https://github.com/TBejarano24?tab=repositories" target="_blank">PROJECTS</a>
+    <div class="hidden md:block">
+      <nav class="flex justify-center items-center h-20 gap-10 dark:bg-[#091021] bg-white dark:text-white text-black">
+        <a class="hover:scale-110 hover:font-semibold ease-in duration-100" href="#aboutme">ABOUT ME</a>
+        <a class="hover:scale-110 hover:font-semibold ease-in duration-100" href="#skills">SKILLS</a>
+        <a class="hover:scale-110 hover:font-semibold ease-in duration-100"
+          href="https://github.com/TBejarano24?tab=repositories" target="_blank">PROJECTS</a>
+      </nav>
+    </div>
+    <div class="hidden md:block">
+      <a class="absolute right-9 top-5 size-10 border p-[10px_110px_12px_10px] rounded-3xl dark:text-white text-black dark:hover:bg-[#75b756] hover:bg-[#b12924] hover:text-black hover:font-semibold"
+        href="#contact">CONTACT
+        <img class="hidden absolute right-2 top-[7px] scale-[155%] z-1 dark:block"
+          src="./resources/bxs-right-top-arrow-circle-green.svg" alt="arrow" />
+        <img class="block absolute right-2 top-[7px] scale-[155%] z-1 dark:hidden"
+          src="./resources/bxs-right-top-arrow-circle-red.svg" alt="arrow" />
+      </a>
+    </div>
+    <div class="block md:hidden">
+      <!-- drawer init and toggle -->
+      <div class="text-center">
+        <button id="menuButton" class="scale-200 m-6" type="button" data-drawer-target="drawer-right-example"
+          data-drawer-show="drawer-right-example" data-drawer-placement="right" aria-controls="drawer-right-example">
+          <div class="hidden dark:block">
+            <img class="hidden dark:block" src="./resources/bx-menu-white.svg" alt="menu_icon" />
           </div>
+          <div class="block dark:hidden">
+            <img class="block dark:hidden" src="./resources/bx-menu-black.svg" alt="menu_icon">
+          </div>
+        </button>
+      </div>
+
+      <!-- drawer component -->
+      <div id="drawer-right-example"
+        class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-40 dark:bg-gray-800"
+        tabindex="-1" aria-labelledby="drawer-right-label">
+        <button id="closeMenu" type="button" data-drawer-hide="drawer-right-example"
+          aria-controls="drawer-right-example"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
+          <span class="sr-only">Close menu</span>
+        </button>
+        <div class="flex flex-col dark:text-white text-black gap-6 mt-10 menuHyperLink">
+          <a href="#aboutme">ABOUT ME</a>
+          <hr>
+          <a href="#skills">SKILLS</a>
+          <hr>
+          <a href="https://github.com/TBejarano24?tab=repositories" target="_blank">PROJECTS</a>
+          <hr>
+          <a class="size-10 border p-[10px_110px_12px_10px] rounded-3xl text-black hover:bg-[#] dark:text-white dark:hover:bg-[#75b756] hover:text-black hover:font-semibold hidden dark:block"
+            href="#contact">CONTACT
+            <img class="absolute right-[30px] top-[282px] scale-[155%] z-1 hidden dark:block"
+              src="./resources/bxs-right-top-arrow-circle-green.svg" alt="arrow" />
+          </a>
+          <a class="size-10 border p-[10px_110px_12px_10px] rounded-3xl text-black hover:bg-[#b12924] dark:text-white dark:hover:bg-[#75b756] hover:text-black hover:font-semibold dark:hidden block"
+            href="#contact">CONTACT
+            <img class="absolute right-[30px] top-[282px] scale-[155%] z-1 dark:hidden block"
+              src="./resources/bxs-right-top-arrow-circle-red.svg" alt="arrow" />
+          </a>
         </div>
       </div>
-    </header>
-    <main class="flex flex-col justify-center items-center">
-      <section
-        class="h-[560px] w-screen bg-linear-to-b from-[#0a1124] from-30% to-[#28498d] flex flex-col justify-between items-center text-4xl"
-      >
-        <div class="flex flex-col text-white text-center gap-1 absolute top-28">
-          <p>
-            I'm <span class="text-[#a4ff7a]"><em>Tomás Bejarano</em></span>
-          </p>
-          <h1>
-            <span class="border border-[#ffffff69] rounded-xl">Front-End</span
-            ><span> Developer</span>
-          </h1>
-        </div>
-        <!-- Acá va un PNG mío -->
-        <div class="flex flex-col justify-center items-center">
-          <img
-            class="w-[170px] h-[170px] absolute top-[260px] drop-shadow-[0_0px_50px_rgba(255,255,0,0.5)] rounded-full"
-            src="./resources/tommy_hero_img_round.jpg"
-            alt="foto perfil"
-          />
-          <a
-            id="aboutme"
-            class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl absolute top-[500px] text-lg hover:scale-110 hover:font-semibold ease-in duration-100"
-            href="https://github.com/TBejarano24?tab=repositories"
-            target="_blank"
-            >MY PROJECTS</a
-          >
-        </div>
-
-        <!-- En estos divs van los cuadritos con info para presumir -->
-        <!-- <div
-          class="absolute left-10 top-[400px] bg-[#1e2337] w-86 rounded-xl p-6 -rotate-13 drop-shadow-[0_0px_100px_rgba(255,255,0,0.5)] hover:scale-110 hover:top-[390px] ease-in duration-100"
-        >
-          <p class="text-white text-lg">Client Review</p>
-          <p class="text-[rgba(255,255,255,0.45)] text-sm">
-            Did a great job building my website, he perfectly replicated my
-            design and exceeded my expectations. He made sure to consult me
-            frequently in order to meet my expectations for the website, and was
-            very thoughtful of my ideas and plans.
-          </p>
-        </div>
-
-        <div
-          class="absolute right-10 top-[400px] bg-[#1e2337] w-80 rounded-xl p-6 rotate-13 drop-shadow-[0_0px_100px_rgba(255,255,0,0.5)] hover:scale-110 hover:top-[390px] ease-in duration-100"
-        >
-          <p class="text-white text-lg">My Expertise</p>
-          <div class="relative text-[rgba(255,255,255,0.45)] text-sm">
-            <p>BACKEND</p>
-            <p>FRONTEND</p>
-            <p>ENGLISH</p>
-            <p class="absolute left-18 top-[-7px]">_________________________</p>
-            <p class="absolute left-19 top-3.5">________________________</p>
-            <p class="absolute left-18 top-8.5">_________________________</p>
-            <p
-              class="absolute right-2 top-0 text-white bg-[#2a314d] rounded-md"
-            >
-              75%
-            </p>
-            <p
-              class="absolute right-2 top-5 text-white bg-[#2a314d] rounded-md"
-            >
-              70%
-            </p>
-            <p
-              class="absolute right-2 top-10 text-white bg-[#2a314d] rounded-md"
-            >
-              72%
-            </p>
-            <div
-              class="absolute bg-red-400 w-3 h-3 left-[170px] top-[3px] border-white border-2 rounded-full"
-            ></div>
-            <div
-              class="absolute bg-green-400 w-3 h-3 left-[155px] top-[24px] border-white border-2 rounded-full"
-            ></div>
-            <div
-              class="absolute bg-blue-400 w-3 h-3 left-[160px] top-[44px] border-white border-2 rounded-full"
-            ></div>
-          </div>
-        </div> -->
-      </section>
-
-      <section
-        class="flex flex-col justify-start items-center h-[500px]"
-      >
-        <h2 class="text-[#a4ff7a] text-4xl mt-[30px]">WHO AM I?</h2>
-        <p class="text-white max-w-120 text-center my-12 mx-3">
-          I'm an aspiring full-stack web developer with experience using
-          front-end languages such as HTML5, CSS3 and JavaScript and tools like
-          Tailwind CSS to optimize my work.<br /><br />For a long time I've also
-          developed data engineering experience through small team projects,
-          using languages such as Python and SQL, with tools like Microsoft SQL
-          Server and AWS to perform ETL jobs.<br /><br />In my free time I enjoy
-          doing creative activities, such as drawing, sculpting and writing. I
-          also like to play voleyball with my friends.
+    </div>
+  </header>
+  <main class="flex flex-col justify-center items-center">
+    <section
+      class="h-[560px] w-screen bg-linear-to-b dark:from-[#0a1124] dark:from-30% dark:to-[#28498d] from-[#fff] from-30% to-[#d288d9] flex flex-col justify-between items-center text-4xl sm:text-5xl lg:h-[620px]">
+      <div class="flex flex-col dark:text-white text-[#000] text-center gap-1 absolute top-28 sm:gap-1.5">
+        <p>
+          I'm <span class="dark:text-[#a4ff7a] text-[#da312b]"><em>Tomás Bejarano</em></span>
         </p>
-        <!-- Imagen decorativa -->
-
-        <!-- <img
-          class="absolute left-72 top-[960px] h-[100px] -rotate-15 drop-shadow-[-50px_-50px_50px_rgba(255,255,255,0.3)] rounded-xl scale-150 hover:rotate-15 hover:scale-170 ease-in duration-100"
-          src="./resources/me_hanging_out_2.jpg"
-          alt="foto decorativa"
-        />
+        <h1>
+          <span class="border dark:border-[#ffffff69] border-[#686868af] rounded-xl">Front-End</span><span>
+            Developer</span>
+        </h1>
+      </div>
+      <!-- Acá va un PNG mío -->
+      <div class="flex flex-col justify-center items-center">
+        <img
+          class="w-[170px] h-[170px] absolute top-[260px] drop-shadow-[0_0px_50px_rgba(255,255,0,0.5)] rounded-full lg:hidden"
+          src="./resources/tommy_hero_img_round.jpg" alt="foto perfil" />
 
         <img
-          class="absolute left-22 top-[1200px] h-[200px] rotate-15 drop-shadow-[0_0px_50px_rgba(255,255,255,0.3)] rounded-xl w-[150px] hover:scale-120 hover:-rotate-15 ease-in duration-100"
-          src="./resources/tommy_hero_img_1.webp"
-          alt="foto decorativa"
-        />
-        <img
-          class="absolute right-28 top-[1000px] h-[200px] -rotate-15 drop-shadow-[-70px_-90px_50px_rgba(255,255,255,0.3)] rounded-xl hover:scale-120 hover:rotate-15 ease-in duration-100"
-          src="./resources/tommyCodeando1.webp"
-          alt="foto decorativa"
-        /> -->
-        <!-- Tarjeta informativa -->
-        <div></div>
-        <a
-          id="skills"
-          class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg hover:scale-110 hover:font-semibold ease-in duration-100"
-          href="https://github.com/TBejarano24?tab=repositories"
-          target="_blank"
-          >SHOW MY PROJECTS</a
-        >
-      </section>
-      <h2 class="text-[#a4ff7a] text-4xl mt-[130px]">MY SKILLS</h2>
-      <section
-        class="flex flex-wrap justify-center items-center h-[550px] w-screen"
-      >
-        <!-- Íconos con mis habilidades -->
-        <div class="flex flex-wrap justify-center items-center">
-          <div
-            class="w-26 h-26 bg-linear-to-br from-[#5777ab] to-[#1e2235] flex justify-center items-center rounded-lg m-1"
-          >
-            <div
-              class="bg-[#1e2235] w-24 h-24 flex justify-center items-center rounded-lg"
-            >
-              <img
-                class="w-24"
-                src="./resources/bxl-html5.svg"
-                alt="html logo"
-              />
-            </div>
-          </div>
-          <div
-            class="w-26 h-26 bg-linear-to-br from-[#5777ab] to-[#1e2235] flex justify-center items-center rounded-lg m-1"
-          >
-            <div
-              class="bg-[#1e2235] w-24 h-24 flex justify-center items-center rounded-lg"
-            >
-              <img class="w-24" src="./resources/bxl-css3.svg" alt="css logo" />
-            </div>
-          </div>
-          <div
-            class="w-26 h-26 bg-linear-to-br from-[#5777ab] to-[#1e2235] flex justify-center items-center rounded-lg m-1"
-          >
-            <div
-              class="bg-[#1e2235] w-24 h-24 flex justify-center items-center rounded-lg"
-            >
-              <img
-                class="w-24"
-                src="./resources/bxl-javascript.svg"
-                alt="javascript logo"
-              />
-            </div>
-          </div>
-          <div
-            class="w-26 h-26 bg-linear-to-br from-[#5777ab] to-[#1e2235] flex justify-center items-center rounded-lg m-1"
-          >
-            <div
-              class="bg-[#1e2235] w-24 h-24 flex justify-center items-center rounded-lg"
-            >
-              <img
-                class="w-24"
-                src="./resources/bxl-python.svg"
-                alt="python logo"
-              />
-            </div>
-          </div>
-          <div
-            class="w-26 h-26 bg-linear-to-br from-[#5777ab] to-[#1e2235] flex justify-center items-center rounded-lg m-1"
-          >
-            <div
-              class="bg-[#1e2235] w-24 h-24 flex justify-center items-center rounded-lg"
-            >
-              <img
-                class="w-24"
-                src="./resources/bxl-tailwind-css.svg"
-                alt="tailwind css logo"
-              />
-            </div>
-          </div>
-          <div
-            class="w-26 h-26 bg-linear-to-br from-[#5777ab] to-[#1e2235] flex justify-center items-center rounded-lg m-1"
-          >
-            <div
-              class="bg-[#1e2235] w-24 h-24 flex justify-center items-center rounded-lg"
-            >
-              <img class="w-24" src="./resources/bxl-aws.svg" alt="aws logo" />
-            </div>
-          </div>
-        </div>
-        <div
-          class="bg-[#151d32] w-[320px] h-[215px] flex flex-col justify-center items-center rounded-lg"
-        >
-          <p class="text-white text-xl font-semibold max-w-60 text-center mb-5">
-            Experience with data engineering using Python and SQL
-          </p>
-          <a
-            class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg hover:scale-110 hover:font-semibold ease-in duration-100"
-            href=""
-            >DOWNLOAD MY CV</a
-          >
-        </div>
-        <!-- Acá van mis años de experiencia -->
-      </section>
-      <section class="relative flex items-center justify-center my-18">
-        <p class="absolute top-0 text-white text-3xl text-center">
-          THE WORKS CLOSEST TO MY HEART
+          class="hidden w-[250px] h-[350px] absolute top-[270px] drop-shadow-[0_0px_50px_rgba(255,255,0,0.5)] lg:block"
+          src="./resources/tommy_hero_img_2.png" alt="foto perfil">
+
+        <a id="aboutme"
+          class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl absolute top-[480px] text-lg hover:scale-110 hover:font-semibold ease-in duration-100 lg:top-[520px]"
+          href="https://github.com/TBejarano24?tab=repositories" target="_blank">MY PROJECTS</a>
+      </div>
+
+      <!-- En estos divs van los cuadritos con info para presumir -->
+      <div
+        class="hidden absolute left-10 top-[300px] dark:bg-[#1e2337] bg-[#fff] w-86 rounded-xl p-6 -rotate-13 drop-shadow-[0_0px_100px_rgba(255,255,0,0.5)] hover:scale-110 hover:top-[290px] ease-in duration-100 lg:block">
+        <p class="dark:text-white text-black text-lg">Client Review</p>
+        <p class="dark:text-[rgba(255,255,255,0.45)] text-[rgba(0,0,0,0.6)] text-sm">
+          Did a great job building my website, he perfectly replicated my
+          design and exceeded my expectations. He made sure to consult me
+          frequently in order to meet my expectations for the website, and was
+          very thoughtful of my ideas and plans.
         </p>
-        <a
-          class="absolute top-[550px] py-2.5 px-20 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg self-center z-1 hover:scale-110 hover:font-semibold ease-in duration-100"
-          href="https://github.com/TBejarano24?tab=repositories"
-          target="_blank"
-          >SHOW MY PROJECTS</a
-        >
-        <div
-          class="relative flex flex-col justify-center items-center w-screen h-[600px]"
-        >
-          <!-- Imagenes y descripciones de proyectos -->
-          <img
-            class="absolute w-[200px] h-[400px] rounded-3xl right-23 z-1"
-            src="./resources/FaunAR_img.png"
-            alt="Captura de un sitio web"
-          />
-          <span
-            class="hidden absolute bottom-8 left-21 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl z-10"
-            >Biology Blog</span
-          >
-          <img
-            class="absolute w-[200px] h-[400px] rounded-3xl right-15 rotate-3"
-            src="./resources/weather_prjct_img.png"
-            alt="Captura de un fragmento de código (Python)"
-          />
-          <span
-            class="hidden absolute bottom-8 left-16 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl"
-            >Weather Data ETL</span
-          >
-          <img
-            class="absolute w-[200px] h-[400px] rounded-3xl right-31 z-2 -rotate-3"
-            src="./resources/sql_prjct_img.png"
-            alt="Captura de un fragmento de código (SQL)"
-          />
-          <span
-            class="hidden absolute bottom-8 left-12 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl"
-            >Database Planning</span
-          >
+      </div>
+
+      <div
+        class="hidden absolute right-10 top-[400px] dark:bg-[#1e2337] bg-[#fff] w-80 rounded-xl p-6 rotate-13 drop-shadow-[0_0px_100px_rgba(255,255,0,0.5)] hover:scale-110 hover:top-[390px] ease-in duration-100 lg:block">
+        <p class="dark:text-white text-black text-lg">My Expertise</p>
+        <div class="relative dark:text-[rgba(255,255,255,0.45)] text-[rgba(0,0,0,0.6)] text-sm">
+          <p>BACKEND</p>
+          <p>FRONTEND</p>
+          <p>ENGLISH</p>
+          <p class="absolute left-18 top-[-7px]">_________________________</p>
+          <p class="absolute left-19 top-3.5">________________________</p>
+          <p class="absolute left-18 top-8.5">_________________________</p>
+          <p class="absolute right-2 top-0 dark:text-white dark:bg-[#2a314d] text-black bg-[#ddd] rounded-md">
+            75%
+          </p>
+          <p class="absolute right-2 top-5 dark:text-white dark:bg-[#2a314d] text-black bg-[#ddd] rounded-md">
+            70%
+          </p>
+          <p class="absolute right-2 top-10 dark:text-white dark:bg-[#2a314d] text-black bg-[#ddd] rounded-md">
+            72%
+          </p>
+          <div
+            class="absolute bg-red-400 w-3 h-3 left-[170px] top-[3px] dark:border-white border-black border-2 rounded-full">
+          </div>
+          <div
+            class="absolute bg-green-400 w-3 h-3 left-[155px] top-[24px] dark:border-white border-black border-2 rounded-full">
+          </div>
+          <div
+            class="absolute bg-blue-400 w-3 h-3 left-[160px] top-[44px] dark:border-white border-black border-2 rounded-full">
+          </div>
         </div>
-      </section>
-      <section
-        id="contact"
-        class="flex flex-col justify-center items-center bg-[#fffbdd] m-5 w-[90%] rounded-2xl"
-      >
-        <h2 class="m-5 text-3xl font-semibold">LET'S HAVE A CHAT</h2>
-        <form
-          class="flex flex-col justify-start items-center h-[480px] w-[90%] gap-6"
-          action=""
-        >
-          <input
-            class="bg-[#c8c8c8] pb-10 p-2 w-[80%] rounded-2xl hover:scale-110 ease-in duration-100"
-            placeholder="YOUR NAME"
-            type="text"
-            id="contact-name"
-            name="name"
-          />
-          <input
-            class="bg-[#c8c8c8] pb-10 p-2 w-[80%] rounded-2xl hover:scale-110 ease-in duration-100"
-            placeholder="EMAIL ADDRESS"
-            type="email"
-            id="contact-email"
-            name="email"
-          />
-          <textarea
-            class="bg-[#c8c8c8] p-2 h-40 w-[80%] rounded-2xl hover:scale-110 hover:font-semibold ease-in duration-100"
-            rows="10"
-            placeholder="CHAT HERE"
-            name="message"
-            id="contact-message"
-          ></textarea>
-          <input
-            class="bg-[#ffe8a7] h-12 w-[80%] rounded-2xl hover:scale-110 hover:font-semibold ease-in duration-100"
-            type="submit"
-            value="SUBMIT HERE"
-          />
-        </form>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+
+    <section class="flex flex-col justify-start items-center h-[500px] lg:h-[620px]">
+      <h2 class="dark:text-[#a4ff7a] text-[#da312b] text-4xl mt-[30px] sm:text-5xl">WHO AM I?</h2>
+      <p class="dark:text-white text-black max-w-120 text-center my-12 mx-3">
+        I'm an aspiring full-stack web developer with experience using
+        front-end languages such as HTML5, CSS3 and JavaScript and tools like
+        Tailwind CSS to optimize my work.<br /><br />For a long time I've also
+        developed data engineering experience through small team projects,
+        using languages such as Python and SQL, with tools like Microsoft SQL
+        Server and AWS to perform ETL jobs.<br /><br />In my free time I enjoy
+        doing creative activities, such as drawing, sculpting and writing. I
+        also like to play voleyball with my friends.
+      </p>
+      <!-- Imagen decorativa -->
+
+      <img
+        class="hidden absolute left-30 top-[700px] h-[100px] -rotate-15 drop-shadow-[-50px_-50px_50px_rgba(255,255,255,0.3)] rounded-xl scale-150 hover:rotate-15 hover:scale-170 ease-in duration-100 lg:block"
+        src="./resources/me_hanging_out_2.jpg" alt="foto decorativa" />
+
+      <img
+        class="hidden absolute left-20 top-[930px] h-[200px] rotate-15 drop-shadow-[0_0px_50px_rgba(255,255,255,0.3)] rounded-xl w-[150px] hover:scale-120 hover:-rotate-15 ease-in duration-100 lg:block"
+        src="./resources/tommy_hero_img_1.webp" alt="foto decorativa" />
+
+      <img
+        class="hidden absolute right-15 top-[850px] h-[200px] -rotate-15 drop-shadow-[-70px_-90px_50px_rgba(255,255,255,0.3)] rounded-xl hover:scale-120 hover:rotate-15 ease-in duration-100 lg:block"
+        src="./resources/tommyCodeando1.webp" alt="foto decorativa" />
+      <!-- Tarjeta informativa -->
+      <div></div>
+      <a id="skills"
+        class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg hover:scale-110 hover:font-semibold ease-in duration-100"
+        href="https://github.com/TBejarano24?tab=repositories" target="_blank">SHOW MY PROJECTS</a>
+    </section>
+    <h2
+      class="dark:text-[#a4ff7a] text-[#da312b] text-4xl mt-[100px] sm:mt-[70px] sm:mb-[30px] sm:text-5xl lg:m-0 lg:mb-5">
+      MY SKILLS</h2>
+    <section class="flex flex-wrap justify-center items-center h-[550px] w-screen">
+      <!-- Íconos con mis habilidades -->
+      <div class="flex flex-wrap justify-center items-center max-w-[445px] sm:max-w-[700px]">
+        <div
+          class="w-26 h-26 bg-linear-to-br dark:from-[#5777ab] dark:to-[#1e2235] from-[#d288d9] to-[#cccccc] flex justify-center items-center rounded-lg m-1 sm:w-42 sm:h-42">
+          <div
+            class="dark:bg-[#1e2235] bg-[#cccccc] w-24 h-24 flex justify-center items-center rounded-lg sm:w-40 sm:h-40">
+            <img class="w-24 sm:w-40" src="./resources/bxl-html5.svg" alt="html logo" />
+          </div>
+        </div>
+        <div
+          class="w-26 h-26 bg-linear-to-br dark:from-[#5777ab] dark:to-[#1e2235] from-[#d288d9] to-[#cccccc] flex justify-center items-center rounded-lg m-1 sm:w-42 sm:h-42">
+          <div
+            class="dark:bg-[#1e2235] bg-[#cccccc] w-24 h-24 flex justify-center items-center rounded-lg sm:w-40 sm:h-40">
+            <img class="w-24 sm:w-40" src="./resources/bxl-css3.svg" alt="css logo" />
+          </div>
+        </div>
+        <div
+          class="w-26 h-26 bg-linear-to-br dark:from-[#5777ab] dark:to-[#1e2235] from-[#d288d9] to-[#cccccc] flex justify-center items-center rounded-lg m-1 sm:w-42 sm:h-42">
+          <div
+            class="dark:bg-[#1e2235] bg-[#cccccc] w-24 h-24 flex justify-center items-center rounded-lg sm:w-40 sm:h-40">
+            <img class="w-24 sm:w-40" src="./resources/bxl-javascript.svg" alt="javascript logo" />
+          </div>
+        </div>
+        <div
+          class="w-26 h-26 bg-linear-to-br dark:from-[#5777ab] dark:to-[#1e2235] from-[#d288d9] to-[#cccccc] flex justify-center items-center rounded-lg m-1 sm:w-42 sm:h-42">
+          <div
+            class="dark:bg-[#1e2235] bg-[#cccccc] w-24 h-24 flex justify-center items-center rounded-lg sm:w-40 sm:h-40">
+            <img class="w-24 sm:w-40" src="./resources/bxl-python.svg" alt="python logo" />
+          </div>
+        </div>
+        <div
+          class="w-26 h-26 bg-linear-to-br dark:from-[#5777ab] dark:to-[#1e2235] from-[#d288d9] to-[#cccccc] flex justify-center items-center rounded-lg m-1 sm:w-42 sm:h-42">
+          <div
+            class="dark:bg-[#1e2235] bg-[#cccccc] w-24 h-24 flex justify-center items-center rounded-lg sm:w-40 sm:h-40">
+            <img class="w-24 sm:w-40" src="./resources/bxl-tailwind-css.svg" alt="tailwind css logo" />
+          </div>
+        </div>
+        <div
+          class="w-26 h-26 bg-linear-to-br dark:from-[#5777ab] dark:to-[#1e2235] from-[#d288d9] to-[#cccccc] flex justify-center items-center rounded-lg m-1 sm:w-42 sm:h-42">
+          <div
+            class="dark:bg-[#1e2235] bg-[#cccccc] w-24 h-24 flex justify-center items-center rounded-lg sm:w-40 sm:h-40">
+            <img class="w-24 sm:w-40" src="./resources/bxl-aws.svg" alt="aws logo" />
+          </div>
+        </div>
+      </div>
+      <div
+        class="dark:bg-[#151d32] bg-[#cccccc] w-[320px] h-[215px] flex flex-col justify-center items-center rounded-lg sm:w-[520px] sm:mt-1.5 lg:h-[300px]">
+        <p
+          class="dark:text-white text-black text-xl font-semibold max-w-60 text-center mb-5 sm:text-2xl sm:max-w-[400px]">
+          Experience with data engineering using Python and SQL
+        </p>
+        <a class="p-2.5 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg hover:scale-110 hover:font-semibold ease-in duration-100"
+          href="">DOWNLOAD MY CV</a>
+      </div>
+      <!-- Acá van mis años de experiencia -->
+    </section>
+    <section class="relative flex items-center justify-center my-18 sm:my-24 w-screen">
+      <p class="absolute top-0 dark:text-white text-black text-3xl text-center sm:text-4xl lg:static lg:max-w-[300px]">
+        THE WORKS CLOSEST TO MY HEART
+      </p>
+      <a class="absolute top-[550px] py-2.5 px-20 bg-[#a4ff7a] border-[3px] border-[rgb(100,52,29)] rounded-3xl text-lg self-center z-1 hover:scale-110 hover:font-semibold ease-in duration-100 lg:top-[410px] lg:left-[5%] lg:z-5"
+        href="https://github.com/TBejarano24?tab=repositories" target="_blank">SHOW MY PROJECTS</a>
+      <div class="flex justify-center items-center h-[600px] max-w-[400px] gap-2 lg:max-w-[600px] md:relative">
+        <!-- Imagenes y descripciones de proyectos -->
+        <img class="absolute w-[200px] h-[400px] rounded-3xl right-23 z-1 sm:static" src="./resources/FaunAR_img.png"
+          alt="Captura de un sitio web" />
+        <span
+          class="hidden absolute bottom-25 left-[-85px] text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl z-10 sm:block md:bottom-15 lg:left-0 lg:bottom-15">Biology
+          Blog</span>
+        <img class="absolute w-[200px] h-[400px] rounded-3xl right-15 rotate-3 sm:static sm:rotate-0"
+          src="./resources/weather_prjct_img.png" alt="Captura de un fragmento de código (Python)" />
+        <span
+          class="hidden absolute bottom-15 text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl sm:block lg:bottom-15">Weather
+          Data ETL</span>
+        <img class="absolute w-[200px] h-[400px] rounded-3xl right-31 z-2 -rotate-3 sm:static sm:rotate-0"
+          src="./resources/sql_prjct_img.png" alt="Captura de un fragmento de código (SQL)" />
+        <span
+          class="hidden absolute bottom-25 right-[-130px] text-[#e8e8e8] bg-[#000000b5] px-3 py-1 rounded-lg font-bold text-2xl z-5 sm:block md:bottom-15 lg:bottom-15 lg:right-[-50px]">Database
+          Planning</span>
+      </div>
+    </section>
+    <section id="contact"
+      class="flex flex-col justify-center items-center dark:bg-[#fffbdd] bg-[#cccccc] m-5 w-[90%] rounded-2xl max-w-[800px]">
+      <h2 class="m-5 text-3xl font-semibold">LET'S HAVE A CHAT</h2>
+      <form class="flex flex-col justify-start items-center h-[480px] w-[90%] gap-6" action="">
+        <input class="dark:bg-[#c8c8c8] bg-white pb-10 p-2 w-[80%] rounded-2xl hover:scale-110 ease-in duration-100"
+          placeholder="YOUR NAME" type="text" id="contact-name" name="name" />
+        <input class="dark:bg-[#c8c8c8] bg-white pb-10 p-2 w-[80%] rounded-2xl hover:scale-110 ease-in duration-100"
+          placeholder="EMAIL ADDRESS" type="email" id="contact-email" name="email" />
+        <textarea
+          class="dark:bg-[#c8c8c8] bg-white p-2 h-40 w-[80%] rounded-2xl hover:scale-110 hover:font-semibold ease-in duration-100"
+          rows="10" placeholder="CHAT HERE" name="message" id="contact-message"></textarea>
+        <input
+          class="dark:bg-[#ffe8a7] bg-[#d288d9] h-12 w-[80%] rounded-2xl hover:scale-110 hover:font-semibold ease-in duration-100"
+          type="submit" value="SUBMIT HERE" />
+      </form>
+    </section>
+  </main>
+</body>
+
 </html>
