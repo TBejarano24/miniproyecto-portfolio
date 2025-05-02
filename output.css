@@ -257,6 +257,9 @@
   .top-\[7px\] {
     top: 7px;
   }
+  .top-\[10px\] {
+    top: 10px;
+  }
   .top-\[24px\] {
     top: 24px;
   }
@@ -314,6 +317,12 @@
   .right-31 {
     right: calc(var(--spacing) * 31);
   }
+  .right-\[-110px\] {
+    right: -110px;
+  }
+  .right-\[-120px\] {
+    right: -120px;
+  }
   .right-\[-130px\] {
     right: -130px;
   }
@@ -340,6 +349,15 @@
   }
   .left-30 {
     left: calc(var(--spacing) * 30);
+  }
+  .left-\[-70px\] {
+    left: -70px;
+  }
+  .left-\[-75px\] {
+    left: -75px;
+  }
+  .left-\[-80px\] {
+    left: -80px;
   }
   .left-\[-85px\] {
     left: -85px;
@@ -487,6 +505,9 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
   .w-24 {
     width: calc(var(--spacing) * 24);
   }
@@ -522,6 +543,9 @@
   }
   .w-\[320px\] {
     width: 320px;
+  }
+  .w-auto {
+    width: auto;
   }
   .w-full {
     width: 100%;
@@ -629,6 +653,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
   .overflow-y-auto {
     overflow-y: auto;
   }
@@ -703,15 +730,6 @@
   }
   .bg-blue-400 {
     background-color: var(--color-blue-400);
-  }
-  .bg-gray-900 {
-    background-color: var(--color-gray-900);
-  }
-  .bg-gray-900\/50 {
-    background-color: color-mix(in srgb, oklch(21% 0.034 264.665) 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-gray-900) 50%, transparent);
-    }
   }
   .bg-green-400 {
     background-color: var(--color-green-400);
@@ -1003,6 +1021,11 @@
       }
     }
   }
+  .sm\:relative {
+    @media (width >= 40rem) {
+      position: relative;
+    }
+  }
   .sm\:static {
     @media (width >= 40rem) {
       position: static;
@@ -1121,6 +1144,21 @@
       position: static;
     }
   }
+  .lg\:top-\[0\] {
+    @media (width >= 64rem) {
+      top: 0;
+    }
+  }
+  .lg\:top-\[10px\] {
+    @media (width >= 64rem) {
+      top: 10px;
+    }
+  }
+  .lg\:top-\[30px\] {
+    @media (width >= 64rem) {
+      top: 30px;
+    }
+  }
   .lg\:top-\[410px\] {
     @media (width >= 64rem) {
       top: 410px;
@@ -1144,6 +1182,11 @@
   .lg\:left-0 {
     @media (width >= 64rem) {
       left: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:left-\[0\] {
+    @media (width >= 64rem) {
+      left: 0;
     }
   }
   .lg\:left-\[5\%\] {
@@ -1194,6 +1237,12 @@
   .lg\:max-w-\[600px\] {
     @media (width >= 64rem) {
       max-width: 600px;
+    }
+  }
+  .lg\:text-2xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
   .dark\:block {
